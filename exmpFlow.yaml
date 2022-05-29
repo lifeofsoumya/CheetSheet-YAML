@@ -2,7 +2,7 @@
 
 workspace: # creating an object
   working_on: "NodeJS"
-  version: 1.0.0
+  version: &ver 1.0.0 # with &ver, the value is assigned to the ver variable
   is_easy: true
   release: 2022-05-29 23:18:10
   tags:
@@ -10,6 +10,21 @@ workspace: # creating an object
     - NodeJS
     - MongoDB
   projects: ["StockAPI", "ChatAPP"] # Array type 2
+  details: # objects inside array [{}, {}, {}]
+    - name: "Sam"
+      email: "sam@nated.in"
+      role: "HR"
+    - name: "Taylor"
+      email: "taylor@nated.in"
+      role: "Sales"
+    - {name: "anonym", email: "anm@nated.in", role: "cyber security"} # 2nd type of object inside array
+  short_desc: > # writing a description
+    It will remove all spacing
+    and white spaces while using the greater than sign
+  long_desc: |
+    By using the pipe symbol you can have the indentation
+    and spacing in your description
+  show_version: *ver # accessing the value assigned before to ver variable
 
 # An employee record
 soumya:

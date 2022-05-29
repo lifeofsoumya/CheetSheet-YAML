@@ -2,7 +2,7 @@
 
 workspace: # creating an object
   working_on: "NodeJS"
-  version: &ver 1.0.0 # with &ver, the value is assigned to the ver variable
+  version: &ver 1.0.0 # with & anchor, the value is assigned to the ver variable
   is_easy: true
   release: 2022-05-29 23:18:10
   tags:
@@ -47,3 +47,12 @@ soumya:
       - python
       - aeronautics
       - ev
+
+# Advance anchors
+Inventors:
+  elon: &about # the about variable contains 'job' and 'worth' data
+    job: Inventor
+    worth: Billions
+  tony:
+    <<: *about # expands the same job and worth from elon & adds to tony
+    invention: Arc Reactor  

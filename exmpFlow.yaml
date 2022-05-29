@@ -26,6 +26,10 @@ workspace: # creating an object
     and spacing in your description
   show_version: *ver # accessing the value assigned before to ver variable
 
+  # type casting
+  age: !!float 11 # 11.0
+  gpa: !!str 9.5 # "3.5"
+
 # An employee record
 soumya:
   name: Soumya Mondal # the colon must be followed by a space
